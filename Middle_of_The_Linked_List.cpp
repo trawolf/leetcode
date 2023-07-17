@@ -13,5 +13,5 @@ struct ListNode {
 };
 
 ListNode* middleNode(ListNode* head) {
-            
+    
 }
