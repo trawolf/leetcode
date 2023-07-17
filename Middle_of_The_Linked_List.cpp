@@ -13,5 +13,43 @@ struct ListNode {
 };
 
 ListNode* middleNode(ListNode* head) {
-    
+    ListNode* slow=head;
+    int n=0;
+    while(head){
+        n++;
+        head=head->next;
+        if(n%2==0){
+            slow=slow->next;
+        }
+    }
+    return slow;
+}
+
+void display(ListNode* head){
+    std::cout<<"Linked List: ";
+    auto temp=head;
+    while(temp){
+        if(!temp->next){
+            std::cout<<temp->val;
+        }else{
+           std::cout<<temp->val<<"->"; 
+        }
+        temp=temp->next;
+    }
+    std::cout<<std::endl;
+}
+
+int main(){
+    ListNode* list=new ListNode(1);
+    auto head=list;
+    int Size=5;
+    for(int i=1;i<Size;i++){
+        ListNode*temp=new ListNode(i+1);
+        list->next=temp;
+        // free(temp);
+        list=list->next;
+    }
+    display(head);
+    display(middleNode(head));
+    return 0;
 }
