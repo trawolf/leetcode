@@ -13,18 +13,18 @@ using std::cin;
 using std::cout;
 using std::endl;
 
-bool ifAll(const string word, const string substring){
-    auto iter=word.begin();
-    while(iter!=word.end()){
-        if(substring.find(*iter)==string::npos){
-            return false;
-        }else{
-            // cout<<substring.find(*iter)<<endl;
-        }
-        iter++;
-    }
-    return true;
-}
+// bool ifAll(const string word, const string substring){
+//     auto iter=word.begin();
+//     while(iter!=word.end()){
+//         if(substring.find(*iter)==string::npos){
+//             return false;
+//         }else{
+//             // cout<<substring.find(*iter)<<endl;
+//         }
+//         iter++;
+//     }
+//     return true;
+// }
 
 int countVowelSubstrings(string word) {
     const string sub("aeiou");
