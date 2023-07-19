@@ -66,4 +66,5 @@ int countVowelSubstrings(string word) {
 int main(){
     string a("cuaieuouac");
     cout<<countVowelSubstrings(a)<<endl;
+    return 0;
 }
